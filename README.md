@@ -2,7 +2,7 @@
 
 Web の技術を使ってあなたのお部屋を暖めます。
 
-[download .exe](https://github.com/likr-sandbox/web-heater/releases/tag/%F0%9F%92%A9)
+[download binary](https://github.com/likr-sandbox/web-heater/releases/tag/%F0%9F%92%A9)
 
 ## 注意
 
