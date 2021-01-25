@@ -1,0 +1,76 @@
+{
+  "name": "web-heater",
+  "version": "1.0.0",
+  "description": "Heating your room with GPU",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron-forge start",
+    "package": "electron-forge package",
+    "premake": "craco build",
+    "make": "electron-forge make"
+  },
+  "keywords": [],
+  "author": "Yosuke Onoue",
+  "homepage": ".",
+  "license": "MIT",
+  "devDependencies": {
+    "@craco/craco": "^6.0.0",
+    "@electron-forge/cli": "^6.0.0-beta.54",
+    "@electron-forge/maker-deb": "^6.0.0-beta.54",
+    "@electron-forge/maker-rpm": "^6.0.0-beta.54",
+    "@electron-forge/maker-squirrel": "^6.0.0-beta.54",
+    "@electron-forge/maker-zip": "^6.0.0-beta.54",
+    "electron": "^12.0.0-beta.16",
+    "prettier": "^2.2.1",
+    "react-scripts": "^4.0.1",
+    "wasm-loader": "^1.3.0",
+    "worker-loader": "^3.0.7"
+  },
+  "dependencies": {
+    "bulma": "^0.9.1",
+    "bulma-extensions": "^6.2.7",
+    "electron-squirrel-startup": "^1.0.0",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "systeminformation": "^4.34.7"
+  },
+  "config": {
+    "forge": {
+      "packagerConfig": {},
+      "makers": [
+        {
+          "name": "@electron-forge/maker-squirrel",
+          "config": {
+            "name": "web_heater"
+          }
+        },
+        {
+          "name": "@electron-forge/maker-zip",
+          "platforms": [
+            "darwin"
+          ]
+        },
+        {
+          "name": "@electron-forge/maker-deb",
+          "config": {}
+        },
+        {
+          "name": "@electron-forge/maker-rpm",
+          "config": {}
+        }
+      ]
+    }
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
